@@ -1,0 +1,20 @@
+    /* start header */
+    
+    @media only screen and (max-width: 991px) {
+        .bigger {
+            font-size: 32px;
+        }
+        .lighter {
+            font-size: 40px;
+        }
+        .home h5 {
+            font-size: 30px;
+        }
+    }
+    
+    @media only screen and (max-width: 991px) {
+        .home {
+            background-position: left;
+        }
+    }
+    /* end header */

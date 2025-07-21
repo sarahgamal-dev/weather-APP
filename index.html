@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+
+    <!-- start navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-dark  z-3 d-flex justify-content-center align-items-center" id="navbarr">
+        <div class="container">
+            <a class="navbar-brand d-flex justify-content-center align-items-center" href="#">
+                <img src="./../img/logo@2x.png" alt="Logo" width="60" class="d-inline-block align-text-top">
+                <div class="content ms-1">
+                    <h6 class="text-white mt-3 ">Weather</h6>
+                    <p class="text-white ">tagline goes here</p>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-0 me-5  ">
+                    <li class="nav-item  main-li  ">
+                        <a class="nav-link text-info    mx-3  a-nav active" href="#home ">Home</a>
+                    </li>
+                    <li class="nav-item nav-li ">
+                        <a class="nav-link    mx-3  a-nav" href="#news ">News</a>
+                    </li>
+                    <li class="nav-item nav-li">
+                        <a class="nav-link    mx-3 a-nav " href="#live cameras ">Live cameras</a>
+                    </li>
+                    <li class="nav-item nav-li ">
+                        <a class="nav-link    mx-3  a-nav" href="#photos ">Photos</a>
+                    </li>
+                    <li class="nav-item nav-li ">
+                        <a class="nav-link    mx-3  a-nav" href="./contact.html ">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+
+    <section class="searching">
+        <div class="container">
+            <form action="javascript:void(0)">
+                <input type="text" placeholder="Find your Location..." class="m-auto" id="searchInput">
+                <button type="button" id="searchBtn">Find</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="forecast-board p-5">
+        <div class="container container-md-fluid">
+            <div class="row forecast-container">
+
+                <!-- today-->
+                <div class="forecast-today col-md-12 col-lg-4">
+                    <div class="header-today ">
+                        <div class="day  float-start" id="today-day"></div>
+                        <div class="date float-end " id="today-date"></div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="content-today">
+                        <div class="city" id="today-city"></div>
+                        <div class="degree-today" id="today-degree">&deg;C</div>
+                    </div>
+
+                    <div class="forecast-icon">
+                        <img id="today-icon" src="" alt="">
+                    </div>
+
+                    <div class="custom-today" id="today-condition"></div>
+
+                    <span><img src="./../img/icon-compass@2x.png" alt=""> <span id="today-wind-dir">East</span></span>
+                    <span><img src="./../img/icon-umberella@2x.png" alt=""> <span id="today-rain">20%</span></span>
+                    <span><img src="./../img/icon-wind@2x.png" alt=""> <span id="today-wind">18km/h</span></span>
+                </div>
+
+                <!--tomorrow-->
+                <div class="forecast-tomorrow col-md-12 col-lg-4">
+                    <div class="header-today">
+                        <div class="day" id="tomorrow-day"></div>
+                    </div>
+
+                    <div class="forecast-content d-flex flex-column justify-content-center align-items-center">
+                        <div class="forecast-icon">
+                            <img id="tomorrow-icon" src="" alt="" width="48">
+                        </div>
+                        <div class="degree" id="tomorrow-degree">&deg;C</div>
+                        <small id="tomorrow-min">&deg;C</small>
+                        <div class="custom" id="tomorrow-condition"></div>
+                    </div>
+                </div>
+
+                <!-- after-->
+                <div class="forecast col-md-12 col-lg-4">
+                    <div class="header-today">
+                        <div class="day" id="after-day"></div>
+                    </div>
+
+                    <div class="forecast-content d-flex flex-column justify-content-center align-items-center">
+                        <div class="forecast-icon">
+                            <img id="after-icon" src="" alt="" width="48">
+                        </div>
+                        <div class="degree" id="after-degree">&deg;C</div>
+                        <small id="after-min">&deg;C</small>
+                        <div class="custom" id="after-condition"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="p-5 footer">
+
+        <div class="container container-md-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <form action="" class="subscribe">
+                        <input type="text" placeholder="Enter your email to subscribe..." class="">
+                        <button type="submit">Subcribe</button>
+                    </form>
+                </div>
+                <div class="social-icons w-lg-25 col-lg-3  offset-1 col-md-12  ">
+                    <ul class="list-unstyled d-flex justify-content-center align-items-center ">
+                        <li class="mx-1 bg-black bg-opacity-25 border-1 rounded-circle d-flex justify-content-center align-items-center "><a href="https://facebook.com " class="text-info "><i class="fab fa-facebook-f "></i></a></li>
+                        <li class="mx-1 bg-black bg-opacity-25 border-1 rounded-circle d-flex justify-content-center align-items-center "><a href="https://twitter.com " class="text-info "><i class="fab fa-twitter "></i></a></li>
+                        <li class="mx-1 bg-black bg-opacity-25 border-1 rounded-circle d-flex justify-content-center align-items-center "> <a href="https://linkedin.com " class="text-info "><i class="fab fa-google-plus"></i></a></li>
+                        <li class="mx-1 bg-black bg-opacity-25 border-1 rounded-circle d-flex justify-content-center align-items-center "><a href="#################### " class="text-info "><i class="fab fa-pinterest "></i></a></li>
+
+                    </ul>
+                </div>
+                <p class=" mt-4">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </div>
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js "></script>
+    <script src="./js/main.js "></script>
+
+</body>
+
+</html>
